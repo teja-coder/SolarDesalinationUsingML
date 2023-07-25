@@ -25,6 +25,7 @@ def user_report():
   elif result=='25cm X 50cm':
       Mirror = 2
   else:
+      Mirror = 3
 
   user_report_data = {
     'T_water': T_water,

@@ -16,7 +16,15 @@ def user_report():
   T_inside_glass = st.sidebar.slider('Inside Glass Temperature',30.0,70.0,0.01)
   Ambient_Temperature = st.sidebar.slider('Ambient Temperature',20.0,40.0,0.01)
   Irradiance = st.sidebar.slider('Irradiance',0.0,1000.0,0.01)
-  Mirror = st.sidebar.slider('Mirror',0,3,0)
+  mirror_dimensions = ['No Mirror', '25cm X 25cm','25cm X 50cm','25cm X 75cm']
+  result = st.selectbox('Mirror', mirror_dimension)
+  if result=='No Mirror':
+      Mirror = 0
+  elif result=='25cm X 25cm':
+      Mirror = 1
+  elif result=='25cm X 50cm':
+      Mirror = 2
+  else:
 
   user_report_data = {
     'T_water': T_water,

@@ -17,7 +17,7 @@ def user_report():
   Ambient_Temperature = st.sidebar.slider('Ambient Temperature',20.0,40.0,0.01)
   Irradiance = st.sidebar.slider('Irradiance',0.0,1000.0,0.01)
   mirror_dimensions = ['No Mirror', '25cm X 25cm','25cm X 50cm','25cm X 75cm']
-  result = st.selectbox('Mirror', mirror_dimensions)
+  result = st.sidebar.selectbox('Mirror', mirror_dimensions)
   if result=='No Mirror':
       Mirror = 0
   elif result=='25cm X 25cm':

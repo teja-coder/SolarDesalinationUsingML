@@ -32,7 +32,7 @@ def user_report():
     'T_inside_glass': T_inside_glass,
     'Ambient_Temperature': Ambient_Temperature,
     'Irradiance': Irradiance,
-    'Mirror': Mirror  
+    'Mirror': result  
   }
 
   report_data = pd.DataFrame(user_report_data, index=[0])
